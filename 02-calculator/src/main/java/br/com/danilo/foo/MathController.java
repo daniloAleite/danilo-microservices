@@ -59,6 +59,15 @@ public class MathController {
         return square;
     }
 
+    @RequestMapping(value = "/mean/{numberOne}/{numberTwo}", method = RequestMethod.GET)
+    public Double mean(@PathVariable("numberOne") String numberOne, @PathVariable("numberTwo") String numberTwo) throws Exception {
+
+        if (!isNumeric(numberOne) || !isNumeric(numberTwo)){
+            throw  new UnsupportedMathGenerationException("Please set numeric value");
+        }
+        Double mean = (convertToDouble(numberOne) + convertToDouble(numberTwo)) / 2;
+        return mean;
+    }
 
 
     private Double convertToDouble(String strNumber) {
