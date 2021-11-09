@@ -1,4 +1,4 @@
-package br.com.danilo.foo.exception.handler;
+package br.com.danilo.foo.handler;
 
 
 import br.com.danilo.foo.exception.ExceptionResponse;
