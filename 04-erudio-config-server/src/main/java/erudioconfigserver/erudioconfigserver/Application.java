@@ -6,10 +6,10 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 
 @SpringBootApplication
 @EnableConfigServer
-public class ErudioConfigServerApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ErudioConfigServerApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }

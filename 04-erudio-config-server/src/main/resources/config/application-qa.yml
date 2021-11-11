@@ -10,4 +10,4 @@ management:
           - '*'
 greeting-service:
   greeting: "Ola"
-  default-value: "Mundo"
+  default-value: "Mundo 4"
