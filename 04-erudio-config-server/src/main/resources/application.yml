@@ -1,8 +1,15 @@
 server:
-  port: 8888
+ port: 8888
 spring:
-  application:
-    name: erudio-config-server
-  profiles:
-    active:
-      - native
+ application:
+   name: erudio-config-server
+ cloud:
+  config:
+    server:
+      git:
+        uri: https://github.com/daniloAleite/test-cloud-config-server
+        #usuário: usuário
+        #senha: senha
+        default-label: master
+        search-paths:
+        - 'greeting-service'
