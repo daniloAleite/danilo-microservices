@@ -30,7 +30,7 @@ public class CambioController {
     ) {
 
         var cambio = repository.findByFromAndTo(from, to);
-        if (cambio ==null) throw new RuntimeException("Currency Unsupported");
+        if (cambio == null) throw new RuntimeException("Currency Unsupported");
 
         var port = environment.getProperty("local.server.port");
         BigDecimal conversionFactor = cambio.getConversionFactor();
